@@ -1,0 +1,4 @@
+.mina/
+old
+node_modules
+build/contracts
