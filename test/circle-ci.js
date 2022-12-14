@@ -94,13 +94,17 @@ class OracleExample extends aggregation( EasyMina ) {
 
 
 async function main() {
+    console.log( 'A' )
     const oracleExample = new OracleExample()
+    console.log( 'B' )
     await oracleExample.init()
+    console.log( 'C' )
     await oracleExample.close()
+    console.log( 'D' )
     return true
 }
 
 
 main()
-    .then( a => console.log( a ) )
-    .catch( e => console.log( e ) )
+    .then( a => process.exit( 0 ) )
+    .catch( e => process.exit( 1 ) )
