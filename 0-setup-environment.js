@@ -1,11 +1,8 @@
 import { EasyMina, aggregation } from './src/EasyMina.js'
-import { MinaDeploy as Deploy }  from './src/oracle/Deploy.js'
-import { MinaVerify as Verify }  from './src/oracle/Verify.js'
-import { MinaListen as Listen }  from './src/oracle/Listen.js'
 import moment from 'moment'
 
 
-class OracleExample extends aggregation( EasyMina, Deploy, Verify, Listen ) {
+class OracleExample extends aggregation( EasyMina ) {
     constructor() {
         super()
         this.config = {
@@ -77,36 +74,15 @@ class OracleExample extends aggregation( EasyMina, Deploy, Verify, Listen ) {
                 'ok2': '🟪',
                 'split': '',
                 'failed': '❌'
-            },
-            'oracle': {
-                'use': 'demo',
-                'demo': {
-                    'publicKey': 'B62qoAE4rBRuTgC42vqvEyUqCGhaZsW58SKVW4Ht8aYqP9UTvxFWBgy',
-                    'server': 'https://mina-credit-score-signer-pe3eh.ondigitalocean.app/user/{{userId}}'
-                }
-            },
-            'events': {
-                'intervalInSeconds': 5,
-                'maxInMinutes': 60,
-                'filterEventsInMinutes': 60
             }
         }
     }
 }
 
 
-
 async function main() {
     const oracleExample = new OracleExample()
     await oracleExample.init()
-    
-/*
-    await oracleExample.deploy( { 'saveFile': true } )
-
-    await oracleExample.contractCreationEvents( {
-        'key': 'contractCreation'
-    } )
-*/
     await oracleExample.close()
     return true
 }
