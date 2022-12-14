@@ -1,11 +1,8 @@
 import { EasyMina, aggregation } from './../src/EasyMina.js'
-import { MinaDeploy as Deploy }  from './../src/oracle/Deploy.js'
-import { MinaVerify as Verify }  from './../src/oracle/Verify.js'
-import { MinaListen as Listen }  from './../src/oracle/Listen.js'
 import moment from 'moment'
 
 
-class OracleExample extends aggregation( EasyMina, Deploy, Verify, Listen ) {
+class OracleExample extends aggregation( EasyMina ) {
     constructor() {
         super()
         this.config = {
