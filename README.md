@@ -13,7 +13,7 @@ In the following examples we use an off chain oracle contract to test EasyMina.j
 
 ## Deploy Contract
 0. Setup your environment
-> See [Keys](#keys) for more Informations
+> See [Setup](#setup) for more Informations
 
 1. Download modules and compile typescript.
 ```
@@ -33,7 +33,7 @@ Contract Creation
 
 ## Send Transaction
 0. Setup your environment
-> See [Keys](#keys) for more Informations  
+> See [Setup](#setup) for more Informations  
   
 
 1. Download modules and compile typescript.
