@@ -2,6 +2,12 @@
 <img src="https://raw.githubusercontent.com/a6b8/a6b8/main/assets/headlines/custom/mina-quickstart.svg" height="45px" alt="Mina Quickstart" name="# Mina Quickstart">
 </a>
 
+EasyMina is made to help deploy and interaction with a smart contract on mina blockchain fast and easy. Following steps are covered:
+- Setup private and public key (if needed)
+- Deploy contract
+- Listen to Events
+- Listen to Contract Creation
+
 <br>
 
 <a href="#table-of-contents">
@@ -82,6 +88,8 @@ Event Transaction
 <a href="#table-of-contents">
 <img src="https://raw.githubusercontent.com/a6b8/a6b8/main/assets/headlines/default/setup.svg" height="45px" name="setup" alt="Setup">
 </a>
+
+To interaction or deploy a smart contract you need a mina address. If you want to use existing keys use "Environment keys" otherwise generate randomly new ones with  "Generate keys".
 
 ## Environment keys
 
